@@ -9,7 +9,9 @@ print(new_array)
 #是，雖然算出來沒有完全等於[[1,0],[0,1]]，因為反矩陣計算浮點數的關係所以不會完全等於!!!
 array1 = np.array([[10, 8], [3, 5]])
 array1_inv = np.linalg.inv(array1)
-print(np.dot(array1_inv,array1)) #dot():點積
+print(np.dot(array1_inv,array1)) #dot():點積，也可用matmul()做矩陣程法/@也可當作矩陣乘法的運算子
+print(np.matmul(array1_inv,array1))
+print(array1_inv @ array1)
 #2. 運用上列array計算特徵值、特徵向量?
 eigenvalues, eigenvectors = np.linalg.eig(array1)
 print("特徵值:",eigenvalues,"\n特徵向量：",eigenvectors)
